@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { ThemeContext, themes } from "./store/theme-context"
+import './reset.css'
+import { Container } from "./Container"
+import { useState } from "react"
+import { Route, Routes, Switch } from "react-router-dom"
+import { MainPage } from "./mainPage/MainPage"
+import { Finance } from "./Finance/Finance"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+export default function App() {
+    const [theme, setTheme] = useState("desert");
 
-export default App;
+    return (
+        <ThemeContext.Provider value={themes[theme]}>
+            <Container>
+                <Routes>
+                    <Route exact path="/" element={<MainPage values={{theme, setTheme}} />} />
+                    <Route exact path="/finance" element={<Finance values={{theme, setTheme}} />} />
+                </Routes>
+            </Container>
+        </ThemeContext.Provider>
+    )
+} 

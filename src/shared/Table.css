@@ -1,0 +1,55 @@
+table {
+    width: 60vw;
+    border-collapse: collapse;
+    background-color: rgb(236, 232, 232);
+    text-align: center;
+}
+
+thead {
+    position: -webkit-sticky;
+    position: sticky;
+    top: -1px;
+    z-index: 1;
+}
+
+tfoot {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: -1px;
+}
+
+tr, td {
+    border: 1px white solid;
+    padding: 10px;
+    position: relative;
+}
+
+.empty-cell {
+    border: none;
+    background-color: white;
+}
+
+tr:hover {
+    background-color: lightgray;
+}
+
+.table-group {
+    cursor: pointer;
+}
+
+table input {
+    width: 130px;
+}
+
+.date, .money {
+    width: 200px;
+    height: 45px;
+}
+
+.comment {
+    width: 300px;
+}
+
+.comment input {
+    width: max-content;
+}

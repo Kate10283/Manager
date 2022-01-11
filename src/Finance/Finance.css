@@ -1,0 +1,44 @@
+.finance-header {
+    display: flex;
+    justify-content: center;
+}
+
+.month {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.month__outer {
+    margin: 30px 0;
+}
+
+.month p {
+    padding: 0 16px;
+}
+
+.month svg {
+    width: 30px;
+    height: 30px;
+}
+
+.month svg {
+    cursor: pointer;
+}
+
+.finance-block {
+    display: flex;
+    margin: 20px;
+}
+
+.finance-helper {
+    margin-left: 20px;
+    display: flex;
+}
+
+.finance-helper svg {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
